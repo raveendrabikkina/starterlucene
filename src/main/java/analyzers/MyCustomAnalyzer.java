@@ -65,7 +65,7 @@ public class MyCustomAnalyzer extends Analyzer {
             synonymMapBuilder.add(new CharsRef("completed"), new CharsRef("complete"), true);
             return synonymMapBuilder.build();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }
